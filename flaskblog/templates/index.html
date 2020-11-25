@@ -1,0 +1,35 @@
+{%extends 'base.html'%}
+
+{%block title%}CoderCodes{%endblock%}
+{%block body%}
+<div class="container">
+    <header class="navbar">
+        <p class='title'>CoderCodes</p>
+        <br>
+
+        <div class="menu">
+            <ul class="nav-list">
+                <li class="nav-item active">Home</li>
+                <li class="nav-item">About</li>
+                <li class="nav-item">Projects</li>
+                <li class="nav-item">News</li>
+            </ul>
+        </div>
+    </header>
+
+
+    <div class="content">
+        <!-- <div class="screen">
+            <img  class=''src="https://images.squarespace-cdn.com/content/v1/53903e14e4b05bdda22359ca/1602807384947-DEZ13MEDK2HLTL6CY69M/ke17ZwdGBToddI8pDm48kEicc-_3XPk3CIrXooc023dZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxqadzch8Bl-AGgkLdFyiRCfyUozvkY8xX0XqvnAsRwu-SRrOkq_uJZ2ZokRuCjywU/wendys-thing-in-thing-THUMB.jpg?format=500w" alt="content">
+            <p>project number 1</p>
+        </div> -->
+        {%for data_screen in data%}
+                <div class="screen">
+                        <img  class=''src="{{data_screen['img']}}" alt="content">
+
+                        <p>{{data_screen['text']}}</p>
+                </div>
+        {%endfor%} 
+    </div>
+</div>
+{%endblock%}
